@@ -1,5 +1,3 @@
-
-
 import { Facebook, Instagram, Mail, MapPin, Phone, Clock } from 'lucide-react';
 const Footer = () => {
   return <footer className="bg-brown-800 text-white">
@@ -64,10 +62,7 @@ const Footer = () => {
                 <Instagram className="h-4 w-4 mr-3" />
                 @franciscomiguelmarcenaria
               </a>
-              <a href="https://facebook.com/Francisco Miguel Marcenaria" target="_blank" rel="noopener noreferrer" className="flex items-center text-beige-200 hover:text-white transition-colors">
-                <Facebook className="h-4 w-4 mr-3" />
-                Francisco Miguel Marcenaria
-              </a>
+              
             </div>
             
             <div className="mt-6">
@@ -94,4 +89,3 @@ const Footer = () => {
     </footer>;
 };
 export default Footer;
-
