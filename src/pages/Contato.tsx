@@ -267,6 +267,24 @@ Gostaria de solicitar um orçamento.`;
                     </div>
                   </a>
                 </div>
+
+                <div className="mt-6 text-center">
+                  <a
+                    href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center hover:scale-105 transition-transform"
+                  >
+                    <img 
+                      src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+                      alt="Fale conosco pelo WhatsApp" 
+                      className="h-16 w-16 rounded-full"
+                    />
+                    <span className="ml-3 bg-green-600 text-white px-4 py-2 rounded-lg font-medium">
+                      FALE CONOSCO
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

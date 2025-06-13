@@ -59,15 +59,19 @@ const Home = () => {
                 <strong>Tradição, Qualidade e Competência</strong> desde 1993. 
                 Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a
                   href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                  className="inline-flex items-center hover:scale-105 transition-transform"
                 >
-                  SOLICITE SEU ORÇAMENTO
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <img 
+                    src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+                    alt="Solicite seu orçamento pelo WhatsApp" 
+                    className="h-16 w-16 rounded-full"
+                  />
+                  <span className="ml-3 text-brown-700 font-semibold">SOLICITE SEU ORÇAMENTO</span>
                 </a>
                 <Link
                   to="/projetos"
@@ -282,10 +286,16 @@ const Home = () => {
             href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-beige-500 text-brown-800 px-8 py-4 rounded-lg hover:bg-beige-400 transition-colors font-semibold text-lg inline-flex items-center"
+            className="inline-flex items-center hover:scale-105 transition-transform"
           >
-            FALE CONOSCO AGORA
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <img 
+              src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+              alt="Fale conosco pelo WhatsApp" 
+              className="h-16 w-16 rounded-full"
+            />
+            <span className="ml-3 bg-beige-500 text-brown-800 px-6 py-3 rounded-lg font-semibold text-lg">
+              FALE CONOSCO AGORA
+            </span>
           </a>
         </div>
       </section>

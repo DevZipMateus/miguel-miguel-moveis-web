@@ -96,9 +96,16 @@ const Footer = () => {
                 href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors font-medium inline-block"
+                className="inline-flex items-center hover:scale-105 transition-transform"
               >
-                FALE CONOSCO
+                <img 
+                  src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+                  alt="Fale conosco pelo WhatsApp" 
+                  className="h-12 w-12 rounded-full"
+                />
+                <span className="ml-2 bg-green-600 text-white px-4 py-2 rounded-lg font-medium">
+                  FALE CONOSCO
+                </span>
               </a>
             </div>
           </div>

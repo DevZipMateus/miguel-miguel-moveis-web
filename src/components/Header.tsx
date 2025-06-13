@@ -72,9 +72,16 @@ const Header = () => {
             href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex bg-brown-700 text-white px-6 py-2 rounded-lg hover:bg-brown-800 transition-colors font-medium"
+            className="hidden md:inline-flex items-center hover:scale-105 transition-transform"
           >
-            SOLICITE SEU ORÇAMENTO
+            <img 
+              src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+              alt="Solicite seu orçamento pelo WhatsApp" 
+              className="h-12 w-12 rounded-full"
+            />
+            <span className="ml-2 bg-brown-700 text-white px-4 py-2 rounded-lg font-medium text-sm">
+              SOLICITE SEU ORÇAMENTO
+            </span>
           </a>
 
           {/* Mobile Menu Button */}
@@ -105,9 +112,16 @@ const Header = () => {
               href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex bg-brown-700 text-white px-6 py-2 rounded-lg hover:bg-brown-800 transition-colors font-medium mt-4"
+              className="inline-flex items-center mt-4 hover:scale-105 transition-transform"
             >
-              SOLICITE SEU ORÇAMENTO
+              <img 
+                src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+                alt="Solicite seu orçamento pelo WhatsApp" 
+                className="h-12 w-12 rounded-full"
+              />
+              <span className="ml-2 bg-brown-700 text-white px-4 py-2 rounded-lg font-medium">
+                SOLICITE SEU ORÇAMENTO
+              </span>
             </a>
           </nav>
         )}
