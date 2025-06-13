@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -50,7 +49,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="container-custom py-2" style={{ backgroundColor: '#977669' }}>
+      <div className="container-custom py-2" style={{ backgroundColor: '#726048' }}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
