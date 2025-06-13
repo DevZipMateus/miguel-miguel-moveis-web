@@ -1,3 +1,4 @@
+
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
@@ -178,7 +179,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-4 sm:mb-6 lg:mb-8 px-2 sm:px-4 lg:px-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-4 sm:mb-6 lg:mb-8 px-2 sm:px-4 lg:px-0">
             <div className="group cursor-pointer">
               <div className="h-40 xs:h-44 sm:h-48 md:h-52 lg:h-56 xl:h-64 rounded-lg mb-2 sm:mb-3 lg:mb-4 overflow-hidden">
                 <img src="/lovable-uploads/b12043e8-c245-4b3c-88af-79641041a98a.png" alt="Cozinha planejada moderna com bancada preta e armários verdes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
@@ -199,7 +200,7 @@ const Home = () => {
               <p className="text-xs xs:text-sm sm:text-base text-gray-600">Ambientes aconchegantes e organizados</p>
             </div>
 
-            <div className="group cursor-pointer md:col-span-2 lg:col-span-1">
+            <div className="group cursor-pointer">
               <div className="h-40 xs:h-44 sm:h-48 md:h-52 lg:h-56 xl:h-64 rounded-lg mb-2 sm:mb-3 lg:mb-4 overflow-hidden">
                 <img src="/lovable-uploads/9f182d5b-7fe1-4305-902a-77b601d04e19.png" alt="Living moderno integrado com cozinha, mesa de jantar e área de estar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
