@@ -1,4 +1,3 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
@@ -32,14 +31,18 @@ const Home = () => {
     text: "Móveis de altíssima qualidade. Estou muito satisfeita com o resultado.",
     rating: 5
   }];
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <section 
+        className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-6" 
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="container-custom section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
@@ -79,7 +82,35 @@ const Home = () => {
 
       {/* Valores da Marca */}
       <section className="section-padding bg-white">
-        
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              NOSSOS VALORES
+            </h2>
+            <p className="text-xl text-gray-600">
+              O que nos diferencia no mercado
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="bg-brown-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="h-8 w-8 text-brown-700" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-brown-800 mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {value.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </section>
 
       {/* Como Funciona - Preview */}
@@ -215,6 +246,8 @@ const Home = () => {
           </a>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;
