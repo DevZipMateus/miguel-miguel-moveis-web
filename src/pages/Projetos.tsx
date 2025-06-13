@@ -1,6 +1,7 @@
 
 import KitchenCarousel from '../components/KitchenCarousel';
 import LivingRoomCarousel from '../components/LivingRoomCarousel';
+import BedroomCarousel from '../components/BedroomCarousel';
 
 const Projetos = () => {
   return (
@@ -32,6 +33,21 @@ const Projetos = () => {
             </p>
           </div>
           <LivingRoomCarousel />
+        </div>
+      </section>
+
+      {/* Carrossel de Quartos */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              PROJETOS DE QUARTOS
+            </h2>
+            <p className="text-xl text-gray-600">
+              Quartos planejados com organização e estilo personalizado
+            </p>
+          </div>
+          <BedroomCarousel />
         </div>
       </section>
     </div>
