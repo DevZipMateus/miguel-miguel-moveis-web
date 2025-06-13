@@ -1,3 +1,4 @@
+
 import { Facebook, Instagram, Mail, MapPin, Phone, Clock } from 'lucide-react';
 const Footer = () => {
   return <footer className="bg-brown-800 text-white">
@@ -84,7 +85,7 @@ const Footer = () => {
       <div className="border-t border-brown-700">
         <div className="container-custom py-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-beige-200 text-sm">
-            <p>&copy; 2024 Miguel & Miguel Marcenaria. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Miguel & Miguel Marcenaria. Todos os direitos reservados.</p>
             <p className="mt-2 md:mt-0">Desenvolvido com excelência para você</p>
           </div>
         </div>
