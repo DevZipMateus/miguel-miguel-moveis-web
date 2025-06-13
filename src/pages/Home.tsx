@@ -33,15 +33,26 @@ const Home = () => {
   }];
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 wood-pattern">
-        <div className="container-custom section-padding">
+      <section 
+        className="relative bg-gradient-to-br from-beige-100 to-beige-200 wood-pattern"
+        style={{
+          backgroundImage: `url('/lovable-uploads/03a3dbc1-68fd-4dea-b52b-6b310a00354b.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Overlay para melhorar a legibilidade do texto */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        
+        <div className="container-custom section-padding relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brown-800 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
                 MÓVEIS PLANEJADOS
-                <span className="block text-brown-600">SOB MEDIDA</span>
+                <span className="block text-beige-200">SOB MEDIDA</span>
               </h1>
-              <p className="text-xl text-brown-700 leading-relaxed">
+              <p className="text-xl text-beige-100 leading-relaxed drop-shadow-md">
                 <strong>Tradição, Qualidade e Competência</strong> desde 1993. 
                 Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
               </p>
@@ -52,9 +63,9 @@ const Home = () => {
                     alt="Solicite seu orçamento pelo WhatsApp" 
                     className="h-12 w-12 rounded-full"
                   />
-                  <span className="ml-3 text-brown-700 font-semibold">SOLICITE SEU ORÇAMENTO</span>
+                  <span className="ml-3 text-white font-semibold drop-shadow-md">SOLICITE SEU ORÇAMENTO</span>
                 </a>
-                <Link to="/projetos" className="border-2 border-brown-700 text-brown-700 px-8 py-4 rounded-lg hover:bg-brown-700 hover:text-white transition-colors font-semibold text-lg inline-flex items-center justify-center">
+                <Link to="/projetos" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-brown-700 transition-colors font-semibold text-lg inline-flex items-center justify-center backdrop-blur-sm">
                   VER PROJETOS
                 </Link>
               </div>
