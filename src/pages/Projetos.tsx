@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight, Eye } from 'lucide-react';
+import KitchenCarousel from '../components/KitchenCarousel';
 
 const Projetos = () => {
   const [activeCategory, setActiveCategory] = useState('todos');
@@ -92,6 +93,23 @@ const Projetos = () => {
           </div>
         </div>
       </section>
+
+      {/* Carrossel de Cozinhas */}
+      {(activeCategory === 'todos' || activeCategory === 'cozinhas') && (
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+                PROJETOS DE COZINHAS
+              </h2>
+              <p className="text-xl text-gray-600">
+                Cozinhas planejadas com funcionalidade e design exclusivo
+              </p>
+            </div>
+            <KitchenCarousel />
+          </div>
+        </section>
+      )}
 
       {/* Grade de Projetos */}
       <section className="section-padding">
