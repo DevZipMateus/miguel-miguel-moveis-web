@@ -45,12 +45,11 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="text-2xl md:text-3xl font-bold text-brown-800">
-              MIGUEL & MIGUEL
-              <div className="text-base md:text-lg font-medium text-brown-600">
-                MARCENARIA
-              </div>
-            </div>
+            <img 
+              src="/lovable-uploads/c0780ec3-dab4-491d-98da-44be6436ae2a.png" 
+              alt="Miguel & Miguel Marcenaria" 
+              className="h-16 md:h-20 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

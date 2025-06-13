@@ -8,8 +8,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">MIGUEL & MIGUEL</h3>
-            <p className="text-lg font-medium text-beige-200 mb-4">MARCENARIA</p>
+            <img 
+              src="/lovable-uploads/c0780ec3-dab4-491d-98da-44be6436ae2a.png" 
+              alt="Miguel & Miguel Marcenaria" 
+              className="h-16 w-auto mb-4 filter brightness-0 invert"
+            />
             <p className="text-beige-100 mb-4">
               Tradição, Qualidade e Competência desde 1993
             </p>
