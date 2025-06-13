@@ -38,14 +38,36 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-4 sm:pt-6" style={{
+      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-4 sm:pt-6 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh]" style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'scroll'
       }}>
-        <div className="container-custom py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+        <style jsx>{`
+          @media (max-width: 640px) {
+            section {
+              background-position: center 20% !important;
+              background-size: cover !important;
+              min-height: 75vh !important;
+            }
+          }
+          @media (min-width: 641px) and (max-width: 1024px) {
+            section {
+              background-position: center 30% !important;
+              min-height: 80vh !important;
+            }
+          }
+          @media (min-width: 1025px) {
+            section {
+              background-position: center center !important;
+              background-attachment: fixed !important;
+            }
+          }
+        `}</style>
+        <div className="container-custom py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 min-h-[inherit] flex items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center w-full">
             <div className="space-y-4 sm:space-y-6 animate-fade-in text-center lg:text-left">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight drop-shadow-lg font-normal">
                 MÓVEIS PLANEJADOS
@@ -160,7 +182,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Projetos em Destaque */}
       <section className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-8 sm:mb-12 px-4 lg:px-0">
@@ -173,7 +194,6 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8 px-4 lg:px-0">
-            {/* Cozinhas */}
             <div className="group cursor-pointer">
               <div className="h-48 sm:h-56 lg:h-64 rounded-lg mb-3 sm:mb-4 overflow-hidden">
                 <img 
@@ -188,7 +208,6 @@ const Home = () => {
               <p className="text-sm sm:text-base text-gray-600">Projetos funcionais e elegantes</p>
             </div>
 
-            {/* Quartos */}
             <div className="group cursor-pointer">
               <div className="h-48 sm:h-56 lg:h-64 rounded-lg mb-3 sm:mb-4 overflow-hidden">
                 <img 
@@ -203,7 +222,6 @@ const Home = () => {
               <p className="text-sm sm:text-base text-gray-600">Ambientes aconchegantes e organizados</p>
             </div>
 
-            {/* Living */}
             <div className="group cursor-pointer md:col-span-2 lg:col-span-1">
               <div className="h-48 sm:h-56 lg:h-64 rounded-lg mb-3 sm:mb-4 overflow-hidden">
                 <img 
@@ -231,7 +249,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Depoimentos */}
       <section className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-beige-50">
         <div className="container-custom">
           <div className="text-center mb-8 sm:mb-12 px-4 lg:px-0">
@@ -263,7 +280,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Final */}
       <section className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-brown-800 text-white">
         <div className="container-custom text-center px-4 lg:px-0">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 sm:mb-4">
