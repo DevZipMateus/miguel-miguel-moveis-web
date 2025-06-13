@@ -42,7 +42,7 @@ const Home = () => {
         <div className="container-custom section-padding py-[98px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg py-[28px]">
+              <h1 className="text-4xl lg:text-6xl text-white leading-tight drop-shadow-lg mx-[239px] px-[233px] my-[11px] py-[9px] md:text-6xl font-normal">
                 MÓVEIS PLANEJADOS
                 <span className="block text-beige-200">SOB MEDIDA</span>
               </h1>
