@@ -35,19 +35,6 @@ const LivingCarousel = () => {
     setSelectedImage(null);
   };
 
-  useEffect(() => {
-    if (!selectedImage && autoplayRef.current) {
-      // Add safety check to ensure the plugin has the necessary methods
-      try {
-        if (typeof autoplayRef.current.play === 'function') {
-          autoplayRef.current.play();
-        }
-      } catch (error) {
-        console.log('Autoplay restart failed:', error);
-      }
-    }
-  }, [selectedImage]);
-
   return (
     <>
       <div className="max-w-6xl mx-auto px-2 sm:px-4">
