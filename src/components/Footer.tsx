@@ -1,18 +1,11 @@
-
 import { Facebook, Instagram, Mail, MapPin, Phone, Clock } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-brown-800 text-white">
+  return <footer className="bg-brown-800 text-white">
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div className="lg:col-span-1">
-            <img 
-              src="/lovable-uploads/c0780ec3-dab4-491d-98da-44be6436ae2a.png" 
-              alt="Miguel & Miguel Marcenaria" 
-              className="h-16 w-auto mb-4 filter brightness-0 invert"
-            />
+            
             <p className="text-beige-100 mb-4">
               Tradição, Qualidade e Competência desde 1993
             </p>
@@ -25,17 +18,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">CONTATO</h4>
             <div className="space-y-3">
-              <a 
-                href="tel:15997827489" 
-                className="flex items-center text-beige-200 hover:text-white transition-colors"
-              >
+              <a href="tel:15997827489" className="flex items-center text-beige-200 hover:text-white transition-colors">
                 <Phone className="h-4 w-4 mr-3" />
                 (15) 99782-7489
               </a>
-              <a 
-                href="mailto:francisco.moveis@hotmail.com" 
-                className="flex items-center text-beige-200 hover:text-white transition-colors"
-              >
+              <a href="mailto:francisco.moveis@hotmail.com" className="flex items-center text-beige-200 hover:text-white transition-colors">
                 <Mail className="h-4 w-4 mr-3" />
                 francisco.moveis@hotmail.com
               </a>
@@ -71,38 +58,19 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">REDES SOCIAIS</h4>
             <div className="space-y-3">
-              <a 
-                href="https://instagram.com/franciscomiguelmarcenaria" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center text-beige-200 hover:text-white transition-colors"
-              >
+              <a href="https://instagram.com/franciscomiguelmarcenaria" target="_blank" rel="noopener noreferrer" className="flex items-center text-beige-200 hover:text-white transition-colors">
                 <Instagram className="h-4 w-4 mr-3" />
                 @franciscomiguelmarcenaria
               </a>
-              <a 
-                href="https://facebook.com/Francisco Miguel Marcenaria" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center text-beige-200 hover:text-white transition-colors"
-              >
+              <a href="https://facebook.com/Francisco Miguel Marcenaria" target="_blank" rel="noopener noreferrer" className="flex items-center text-beige-200 hover:text-white transition-colors">
                 <Facebook className="h-4 w-4 mr-3" />
                 Francisco Miguel Marcenaria
               </a>
             </div>
             
             <div className="mt-6">
-              <a
-                href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center hover:scale-105 transition-transform"
-              >
-                <img 
-                  src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
-                  alt="Fale conosco pelo WhatsApp" 
-                  className="h-12 w-12 rounded-full"
-                />
+              <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
+                <img src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" alt="Fale conosco pelo WhatsApp" className="h-12 w-12 rounded-full" />
                 <span className="ml-2 bg-green-600 text-white px-4 py-2 rounded-lg font-medium">
                   FALE CONOSCO
                 </span>
@@ -121,8 +89,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
