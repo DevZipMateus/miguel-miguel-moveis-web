@@ -1,4 +1,3 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
@@ -70,7 +69,7 @@ const Home = () => {
         <div className="container-custom py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 min-h-[inherit] flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center w-full">
             <div className="space-y-3 sm:space-y-4 lg:space-y-6 animate-fade-in text-center lg:text-left">
-              <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight drop-shadow-lg font-normal">
+              <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight drop-shadow-lg font-normal px-0 py-[77px] my-[20px]">
                 MÓVEIS PLANEJADOS
                 <span className="block text-beige-200">SOB MEDIDA</span>
               </h1>
