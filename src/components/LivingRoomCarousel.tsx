@@ -43,6 +43,22 @@ const LivingRoomCarousel = () => {
     {
       src: '/lovable-uploads/5f15a0a0-ac93-4c4d-a1d4-d1f1016df42d.png',
       alt: 'Sala clean com painel de TV e móveis brancos'
+    },
+    {
+      src: '/lovable-uploads/79da1ff7-d13f-4614-ac6c-6284eb05d660.png',
+      alt: 'Sala de jantar moderna com mesa de vidro e lustre pendente'
+    },
+    {
+      src: '/lovable-uploads/6dcb5cdd-7e8c-4928-ac74-793845ac1452.png',
+      alt: 'Cozinha gourmet integrada com detalhes ripados e pendentes modernos'
+    },
+    {
+      src: '/lovable-uploads/c61a7346-9562-4520-b502-5546137e6865.png',
+      alt: 'Ambiente integrado com sala de jantar, cozinha e área gourmet moderna'
+    },
+    {
+      src: '/lovable-uploads/31545d24-04e2-4312-8018-61df19db0589.png',
+      alt: 'Bar residencial com adega refrigerada e prateleiras iluminadas'
     }
   ];
 
