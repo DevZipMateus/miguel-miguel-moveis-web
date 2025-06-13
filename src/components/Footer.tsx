@@ -1,4 +1,5 @@
 
+
 import { Facebook, Instagram, Mail, MapPin, Phone, Clock } from 'lucide-react';
 const Footer = () => {
   return <footer className="bg-brown-800 text-white">
@@ -59,7 +60,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">REDES SOCIAIS</h4>
             <div className="space-y-3">
-              <a href="https://instagram.com/franciscomiguelmarcenaria" target="_blank" rel="noopener noreferrer" className="flex items-center text-beige-200 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/franciscomiguelmarcenaria?utm_source=qr&igsh=MTV1OTN0Mzh4a2Z5aQ%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center text-beige-200 hover:text-white transition-colors">
                 <Instagram className="h-4 w-4 mr-3" />
                 @franciscomiguelmarcenaria
               </a>
@@ -93,3 +94,4 @@ const Footer = () => {
     </footer>;
 };
 export default Footer;
+
