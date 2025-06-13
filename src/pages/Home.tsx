@@ -1,7 +1,5 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Home = () => {
   const values = [{
     icon: Award,
@@ -20,7 +18,6 @@ const Home = () => {
     title: "ATENDIMENTO PERSONALIZADO",
     description: "Cada projeto é único e desenvolvido especialmente para você."
   }];
-
   const testimonials = [{
     name: "Maria Silva",
     text: "Excelente trabalho! A cozinha ficou perfeita, exatamente como imaginei.",
@@ -34,20 +31,15 @@ const Home = () => {
     text: "Móveis de altíssima qualidade. Estou muito satisfeita com o resultado.",
     rating: 5
   }];
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-2 sm:pt-4 lg:pt-6 min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] xl:min-h-[95vh]" 
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 20%',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'scroll'
-        }}
-      >
+      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-2 sm:pt-4 lg:pt-6 min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] xl:min-h-[95vh]" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center 20%',
+      backgroundRepeat: 'no-repeat',
+      backgroundAttachment: 'scroll'
+    }}>
         <style>
           {`
             @media (max-width: 640px) {
@@ -86,20 +78,12 @@ const Home = () => {
                 Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
               </p>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 items-center lg:items-start px-2 sm:px-4 lg:px-0">
-                <a 
-                  href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="inline-flex items-center hover:scale-105 transition-transform w-full sm:w-auto justify-center"
-                >
+                <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform w-full sm:w-auto justify-center">
                   <span className="bg-brown-700 text-white px-3 xs:px-4 sm:px-6 py-2.5 sm:py-3 lg:py-3 rounded-lg font-semibold text-xs xs:text-sm sm:text-base lg:text-lg drop-shadow-md w-full sm:w-auto text-center">
                     SOLICITE SEU ORÇAMENTO
                   </span>
                 </a>
-                <Link 
-                  to="/projetos" 
-                  className="border-2 border-white text-white px-4 xs:px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg hover:bg-white hover:text-brown-700 transition-colors font-semibold text-xs xs:text-sm sm:text-base lg:text-lg inline-flex items-center justify-center drop-shadow-md w-full sm:w-auto"
-                >
+                <Link to="/projetos" className="border-2 border-white text-white px-4 xs:px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg hover:bg-white hover:text-brown-700 transition-colors font-semibold text-xs xs:text-sm sm:text-base lg:text-lg inline-flex items-center justify-center drop-shadow-md w-full sm:w-auto">
                   VER PROJETOS
                 </Link>
               </div>
@@ -134,9 +118,8 @@ const Home = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-4 lg:px-0">
             {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <div key={index} className="text-center">
+            const IconComponent = value.icon;
+            return <div key={index} className="text-center">
                   <div className="bg-brown-100 w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4">
                     <IconComponent className="h-5 w-5 xs:h-6 xs:w-6 sm:h-7 sm:w-7 lg:h-8 lg:w-8 text-brown-700" />
                   </div>
@@ -146,9 +129,8 @@ const Home = () => {
                   <p className="text-xs xs:text-sm sm:text-base text-gray-600 px-1">
                     {value.description}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -166,23 +148,18 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-4 sm:mb-6 lg:mb-8 px-2 sm:px-4 lg:px-0">
-            {["Escolha o Ambiente", "Descreva seu Projeto", "Informe as Medidas", "Aprovação e Execução", "Entrega e Instalação"].map((step, index) => (
-              <div key={index} className="text-center">
+            {["Escolha o Ambiente", "Descreva seu Projeto", "Informe as Medidas", "Aprovação e Execução", "Entrega e Instalação"].map((step, index) => <div key={index} className="text-center">
                 <div className="bg-brown-700 text-white w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-base xs:text-lg sm:text-xl font-bold mx-auto mb-1 sm:mb-2 lg:mb-3">
                   {index + 1}
                 </div>
                 <h3 className="font-semibold text-brown-800 text-xs sm:text-sm leading-tight px-1">
                   {step}
                 </h3>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="text-center px-2 sm:px-4 lg:px-0">
-            <Link 
-              to="/etapas" 
-              className="bg-brown-700 text-white px-4 xs:px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center text-xs xs:text-sm sm:text-base"
-            >
+            <Link to="/etapas" className="bg-brown-700 text-white px-4 xs:px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center text-xs xs:text-sm sm:text-base">
               CONHEÇA TODAS AS ETAPAS
               <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
             </Link>
@@ -204,11 +181,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-4 sm:mb-6 lg:mb-8 px-2 sm:px-4 lg:px-0">
             <div className="group cursor-pointer">
               <div className="h-40 xs:h-44 sm:h-48 md:h-52 lg:h-56 xl:h-64 rounded-lg mb-2 sm:mb-3 lg:mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/b12043e8-c245-4b3c-88af-79641041a98a.png" 
-                  alt="Cozinha planejada moderna com bancada preta e armários verdes" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                />
+                <img src="/lovable-uploads/b12043e8-c245-4b3c-88af-79641041a98a.png" alt="Cozinha planejada moderna com bancada preta e armários verdes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h3 className="text-base xs:text-lg sm:text-xl font-semibold text-brown-800 mb-1 sm:mb-2">
                 Cozinhas
@@ -218,11 +191,7 @@ const Home = () => {
 
             <div className="group cursor-pointer">
               <div className="h-40 xs:h-44 sm:h-48 md:h-52 lg:h-56 xl:h-64 rounded-lg mb-2 sm:mb-3 lg:mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/ad992950-fb43-4a78-808f-fc1f4b3dde64.png" 
-                  alt="Closet planejado branco com prateleiras, gavetas e cabideiro" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                />
+                <img src="/lovable-uploads/ad992950-fb43-4a78-808f-fc1f4b3dde64.png" alt="Closet planejado branco com prateleiras, gavetas e cabideiro" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h3 className="text-base xs:text-lg sm:text-xl font-semibold text-brown-800 mb-1 sm:mb-2">
                 Quartos
@@ -232,11 +201,7 @@ const Home = () => {
 
             <div className="group cursor-pointer md:col-span-2 lg:col-span-1">
               <div className="h-40 xs:h-44 sm:h-48 md:h-52 lg:h-56 xl:h-64 rounded-lg mb-2 sm:mb-3 lg:mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/9f182d5b-7fe1-4305-902a-77b601d04e19.png" 
-                  alt="Living moderno integrado com cozinha, mesa de jantar e área de estar" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                />
+                <img src="/lovable-uploads/9f182d5b-7fe1-4305-902a-77b601d04e19.png" alt="Living moderno integrado com cozinha, mesa de jantar e área de estar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h3 className="text-base xs:text-lg sm:text-xl font-semibold text-brown-800 mb-1 sm:mb-2">
                 Living
@@ -246,10 +211,7 @@ const Home = () => {
           </div>
           
           <div className="text-center px-2 sm:px-4 lg:px-0">
-            <Link 
-              to="/projetos" 
-              className="bg-brown-700 text-white px-4 xs:px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center text-xs xs:text-sm sm:text-base"
-            >
+            <Link to="/projetos" className="bg-brown-700 text-white px-4 xs:px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center text-xs xs:text-sm sm:text-base">
               VER TODOS OS PROJETOS
               <ArrowRight className="ml-1 sm:ml-2 h-3 w-3 xs:h-4 xs:w-4 sm:h-5 sm:w-5" />
             </Link>
@@ -269,12 +231,9 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-4 lg:px-0">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg shadow-md">
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-white p-3 sm:p-4 lg:p-6 rounded-lg shadow-md">
                 <div className="flex mb-2 sm:mb-3 lg:mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-3 w-3 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-3 w-3 xs:h-4 xs:w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />)}
                 </div>
                 <p className="text-xs xs:text-sm sm:text-base text-gray-600 mb-2 sm:mb-3 lg:mb-4 italic leading-relaxed">
                   "{testimonial.text}"
@@ -282,34 +241,12 @@ const Home = () => {
                 <div className="font-semibold text-brown-800 text-xs xs:text-sm sm:text-base">
                   {testimonial.name}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-brown-800 text-white">
-        <div className="container-custom text-center px-2 sm:px-4 lg:px-0">
-          <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2 lg:mb-4">
-            PRONTO PARA TRANSFORMAR SEU ESPAÇO?
-          </h2>
-          <p className="text-sm xs:text-base sm:text-lg lg:text-xl text-beige-200 mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto leading-relaxed">
-            Entre em contato conosco e descubra como podemos criar o móvel perfeito para sua casa
-          </p>
-          <a 
-            href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center hover:scale-105 transition-transform"
-          >
-            <span className="bg-beige-500 text-brown-800 px-4 xs:px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold text-xs xs:text-sm sm:text-base lg:text-lg">
-              FALE CONOSCO AGORA
-            </span>
-          </a>
-        </div>
-      </section>
-    </div>
-  );
+      
+    </div>;
 };
-
 export default Home;
