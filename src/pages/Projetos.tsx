@@ -3,6 +3,7 @@ import KitchenCarousel from '../components/KitchenCarousel';
 import LivingRoomCarousel from '../components/LivingRoomCarousel';
 import LivingCarousel from '../components/LivingCarousel';
 import BedroomCarousel from '../components/BedroomCarousel';
+import LavaboCarousel from '../components/LavaboCarousel';
 
 const Projetos = () => {
   return (
@@ -64,6 +65,21 @@ const Projetos = () => {
             </p>
           </div>
           <BedroomCarousel />
+        </div>
+      </section>
+
+      {/* Carrossel de Lavabos */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              PROJETOS DE LAVABOS
+            </h2>
+            <p className="text-xl text-gray-600">
+              Lavabos planejados com elegância e funcionalidade
+            </p>
+          </div>
+          <LavaboCarousel />
         </div>
       </section>
     </div>
