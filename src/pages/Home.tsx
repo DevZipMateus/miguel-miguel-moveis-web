@@ -179,24 +179,48 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {[
-              { name: "Cozinhas", desc: "Projetos funcionais e elegantes" },
-              { name: "Quartos", desc: "Ambientes aconchegantes e organizados" },
-              { name: "Home Office", desc: "Espaços produtivos e inspiradores" }
-            ].map((category, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="bg-beige-100 h-64 rounded-lg mb-4 flex items-center justify-center group-hover:bg-beige-200 transition-colors">
-                  <div className="text-center">
-                    <div className="text-6xl text-brown-300 mb-2">📐</div>
-                    <h3 className="text-2xl font-bold text-brown-800">{category.name}</h3>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-brown-800 mb-2">
-                  {category.name}
-                </h3>
-                <p className="text-gray-600">{category.desc}</p>
+            {/* Cozinhas - com imagem real */}
+            <div className="group cursor-pointer">
+              <div className="h-64 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/b12043e8-c245-4b3c-88af-79641041a98a.png" 
+                  alt="Cozinha planejada moderna com bancada preta e armários verdes"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-brown-800 mb-2">
+                Cozinhas
+              </h3>
+              <p className="text-gray-600">Projetos funcionais e elegantes</p>
+            </div>
+
+            {/* Quartos - mantém placeholder */}
+            <div className="group cursor-pointer">
+              <div className="bg-beige-100 h-64 rounded-lg mb-4 flex items-center justify-center group-hover:bg-beige-200 transition-colors">
+                <div className="text-center">
+                  <div className="text-6xl text-brown-300 mb-2">📐</div>
+                  <h3 className="text-2xl font-bold text-brown-800">Quartos</h3>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-brown-800 mb-2">
+                Quartos
+              </h3>
+              <p className="text-gray-600">Ambientes aconchegantes e organizados</p>
+            </div>
+
+            {/* Home Office - mantém placeholder */}
+            <div className="group cursor-pointer">
+              <div className="bg-beige-100 h-64 rounded-lg mb-4 flex items-center justify-center group-hover:bg-beige-200 transition-colors">
+                <div className="text-center">
+                  <div className="text-6xl text-brown-300 mb-2">📐</div>
+                  <h3 className="text-2xl font-bold text-brown-800">Home Office</h3>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-brown-800 mb-2">
+                Home Office
+              </h3>
+              <p className="text-gray-600">Espaços produtivos e inspiradores</p>
+            </div>
           </div>
           
           <div className="text-center">
