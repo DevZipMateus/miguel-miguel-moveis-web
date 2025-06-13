@@ -1,4 +1,3 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -194,13 +193,14 @@ const Home = () => {
               <p className="text-gray-600">Projetos funcionais e elegantes</p>
             </div>
 
-            {/* Quartos - mantém placeholder */}
+            {/* Quartos - com imagem real */}
             <div className="group cursor-pointer">
-              <div className="bg-beige-100 h-64 rounded-lg mb-4 flex items-center justify-center group-hover:bg-beige-200 transition-colors">
-                <div className="text-center">
-                  <div className="text-6xl text-brown-300 mb-2">📐</div>
-                  <h3 className="text-2xl font-bold text-brown-800">Quartos</h3>
-                </div>
+              <div className="h-64 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/ad992950-fb43-4a78-808f-fc1f4b3dde64.png" 
+                  alt="Closet planejado branco com prateleiras, gavetas e cabideiro"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-xl font-semibold text-brown-800 mb-2">
                 Quartos
