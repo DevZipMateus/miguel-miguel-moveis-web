@@ -47,7 +47,11 @@ const Home = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
-                  
+                  <img 
+                    src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
+                    alt="Solicite seu orçamento pelo WhatsApp" 
+                    className="h-12 w-12 rounded-full"
+                  />
                   <span className="ml-3 text-brown-700 font-semibold">SOLICITE SEU ORÇAMENTO</span>
                 </a>
                 <Link to="/projetos" className="border-2 border-brown-700 text-brown-700 px-8 py-4 rounded-lg hover:bg-brown-700 hover:text-white transition-colors font-semibold text-lg inline-flex items-center justify-center">
@@ -57,14 +61,12 @@ const Home = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-brown-200 rounded-3xl p-8 shadow-xl">
-                <div className="bg-white rounded-2xl p-6 text-center">
-                  <div className="text-6xl font-bold text-brown-800 mb-2">30+</div>
-                  <div className="text-brown-600 font-medium">ANOS DE EXPERIÊNCIA</div>
-                  <div className="mt-4 text-sm text-gray-600">
-                    Transformando sonhos em realidade desde 1993
-                  </div>
-                </div>
+              <div className="rounded-3xl overflow-hidden shadow-xl">
+                <img 
+                  src="/lovable-uploads/21dbe677-c2ed-4bed-a4eb-0c5ee2e01097.png" 
+                  alt="Francisco Miguel Marcenaria - Logo da empresa sobre fundo de madeira" 
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
           </div>
