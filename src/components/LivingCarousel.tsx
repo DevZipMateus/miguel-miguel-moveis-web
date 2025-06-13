@@ -36,7 +36,7 @@ const LivingCarousel = () => {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4">
         <Carousel
           opts={{
             align: "start",
@@ -49,23 +49,24 @@ const LivingCarousel = () => {
           ]}
           className="w-full"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-2 sm:-ml-4">
             {livingImages.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <div 
                     className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
                     onClick={() => handleImageClick(image)}
                   >
-                    <div className="h-64 overflow-hidden">
+                    <div className="h-48 sm:h-56 md:h-64 overflow-hidden">
                       <img
                         src={image.src}
                         alt={image.alt}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     </div>
-                    <div className="p-4">
-                      <p className="text-sm text-gray-600 line-clamp-2">
+                    <div className="p-3 sm:p-4">
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
                         {image.alt}
                       </p>
                     </div>
@@ -74,8 +75,8 @@ const LivingCarousel = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
+          <CarouselPrevious className="hidden sm:flex -left-8 lg:-left-12" />
+          <CarouselNext className="hidden sm:flex -right-8 lg:-right-12" />
         </Carousel>
       </div>
 
