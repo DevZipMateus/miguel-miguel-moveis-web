@@ -1,3 +1,4 @@
+
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
@@ -33,40 +34,61 @@ const Home = () => {
   }];
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-2 sm:pt-4 lg:pt-6 min-h-[80vh] sm:min-h-[85vh] lg:min-h-[90vh] xl:min-h-[95vh]" style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-2 sm:pt-4 lg:pt-6" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
       backgroundSize: 'cover',
-      backgroundPosition: 'center 20%',
-      backgroundRepeat: 'no-repeat',
-      backgroundAttachment: 'scroll'
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
     }}>
         <style>
           {`
-            @media (max-width: 640px) {
+            @media (max-width: 480px) {
               section {
-                background-position: center 15% !important;
+                background-position: center 30% !important;
                 background-size: cover !important;
-                min-height: 80vh !important;
+                min-height: 100vh !important;
               }
             }
-            @media (min-width: 641px) and (max-width: 1024px) {
+            @media (min-width: 481px) and (max-width: 640px) {
               section {
                 background-position: center 25% !important;
                 background-size: cover !important;
-                min-height: 85vh !important;
+                min-height: 95vh !important;
               }
             }
-            @media (min-width: 1025px) {
+            @media (min-width: 641px) and (max-width: 768px) {
               section {
-                background-position: center 30% !important;
-                background-attachment: fixed !important;
+                background-position: center 20% !important;
                 background-size: cover !important;
                 min-height: 90vh !important;
               }
             }
+            @media (min-width: 769px) and (max-width: 1024px) {
+              section {
+                background-position: center 15% !important;
+                background-size: cover !important;
+                min-height: 85vh !important;
+              }
+            }
+            @media (min-width: 1025px) and (max-width: 1440px) {
+              section {
+                background-position: center 10% !important;
+                background-size: cover !important;
+                background-attachment: scroll !important;
+                min-height: 90vh !important;
+              }
+            }
+            @media (min-width: 1441px) {
+              section {
+                background-position: center 5% !important;
+                background-size: cover !important;
+                background-attachment: fixed !important;
+                min-height: 95vh !important;
+              }
+            }
           `}
         </style>
-        <div className="container-custom py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 min-h-[inherit] flex items-center">
+        <div className="container-custom py-6 sm:py-8 md:py-12 lg:py-16 xl:py-20 min-h-[100vh] sm:min-h-[95vh] md:min-h-[90vh] lg:min-h-[85vh] xl:min-h-[90vh] 2xl:min-h-[95vh] flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-center w-full">
             <div className="space-y-3 sm:space-y-4 lg:space-y-6 animate-fade-in text-center lg:text-left">
               <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white leading-tight drop-shadow-lg font-normal px-0 py-[77px] my-[20px]">
