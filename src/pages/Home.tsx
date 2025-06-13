@@ -1,51 +1,37 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Home = () => {
-  const values = [
-    {
-      icon: Award,
-      title: "ACABAMENTO IMPECÁVEL",
-      description: "Cada detalhe é pensado para garantir a máxima qualidade e durabilidade."
-    },
-    {
-      icon: Leaf,
-      title: "SUSTENTABILIDADE",
-      description: "Utilizamos madeiras certificadas e processos eco-responsáveis."
-    },
-    {
-      icon: Clock,
-      title: "PONTUALIDADE",
-      description: "Cumprimos rigorosamente os prazos estabelecidos em contrato."
-    },
-    {
-      icon: Users,
-      title: "ATENDIMENTO PERSONALIZADO",
-      description: "Cada projeto é único e desenvolvido especialmente para você."
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Maria Silva",
-      text: "Excelente trabalho! A cozinha ficou perfeita, exatamente como imaginei.",
-      rating: 5
-    },
-    {
-      name: "João Santos",
-      text: "Pontualidade e qualidade impressionantes. Recomendo para todos!",
-      rating: 5
-    },
-    {
-      name: "Ana Paula",
-      text: "Móveis de altíssima qualidade. Estou muito satisfeita com o resultado.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const values = [{
+    icon: Award,
+    title: "ACABAMENTO IMPECÁVEL",
+    description: "Cada detalhe é pensado para garantir a máxima qualidade e durabilidade."
+  }, {
+    icon: Leaf,
+    title: "SUSTENTABILIDADE",
+    description: "Utilizamos madeiras certificadas e processos eco-responsáveis."
+  }, {
+    icon: Clock,
+    title: "PONTUALIDADE",
+    description: "Cumprimos rigorosamente os prazos estabelecidos em contrato."
+  }, {
+    icon: Users,
+    title: "ATENDIMENTO PERSONALIZADO",
+    description: "Cada projeto é único e desenvolvido especialmente para você."
+  }];
+  const testimonials = [{
+    name: "Maria Silva",
+    text: "Excelente trabalho! A cozinha ficou perfeita, exatamente como imaginei.",
+    rating: 5
+  }, {
+    name: "João Santos",
+    text: "Pontualidade e qualidade impressionantes. Recomendo para todos!",
+    rating: 5
+  }, {
+    name: "Ana Paula",
+    text: "Móveis de altíssima qualidade. Estou muito satisfeita com o resultado.",
+    rating: 5
+  }];
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 wood-pattern">
         <div className="container-custom section-padding">
@@ -60,23 +46,11 @@ const Home = () => {
                 Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
-                <a
-                  href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center hover:scale-105 transition-transform"
-                >
-                  <img 
-                    src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
-                    alt="Solicite seu orçamento pelo WhatsApp" 
-                    className="h-16 w-16 rounded-full"
-                  />
+                <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
+                  
                   <span className="ml-3 text-brown-700 font-semibold">SOLICITE SEU ORÇAMENTO</span>
                 </a>
-                <Link
-                  to="/projetos"
-                  className="border-2 border-brown-700 text-brown-700 px-8 py-4 rounded-lg hover:bg-brown-700 hover:text-white transition-colors font-semibold text-lg inline-flex items-center justify-center"
-                >
+                <Link to="/projetos" className="border-2 border-brown-700 text-brown-700 px-8 py-4 rounded-lg hover:bg-brown-700 hover:text-white transition-colors font-semibold text-lg inline-flex items-center justify-center">
                   VER PROJETOS
                 </Link>
               </div>
@@ -110,8 +84,7 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+            {values.map((value, index) => <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
                 <div className="bg-beige-100 p-6 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:bg-brown-100 transition-colors">
                   <value.icon className="h-8 w-8 text-brown-700" />
                 </div>
@@ -121,8 +94,7 @@ const Home = () => {
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {value.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -140,29 +112,18 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
-            {[
-              "Escolha o Ambiente",
-              "Descreva seu Projeto", 
-              "Informe as Medidas",
-              "Aprovação e Execução",
-              "Entrega e Instalação"
-            ].map((step, index) => (
-              <div key={index} className="text-center">
+            {["Escolha o Ambiente", "Descreva seu Projeto", "Informe as Medidas", "Aprovação e Execução", "Entrega e Instalação"].map((step, index) => <div key={index} className="text-center">
                 <div className="bg-brown-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
                   {index + 1}
                 </div>
                 <h3 className="font-semibold text-brown-800 text-sm">
                   {step}
                 </h3>
-              </div>
-            ))}
+              </div>)}
           </div>
           
           <div className="text-center">
-            <Link
-              to="/etapas"
-              className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center"
-            >
+            <Link to="/etapas" className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center">
               CONHEÇA TODAS AS ETAPAS
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
@@ -186,11 +147,7 @@ const Home = () => {
             {/* Cozinhas - com imagem real */}
             <div className="group cursor-pointer">
               <div className="h-64 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/b12043e8-c245-4b3c-88af-79641041a98a.png" 
-                  alt="Cozinha planejada moderna com bancada preta e armários verdes"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src="/lovable-uploads/b12043e8-c245-4b3c-88af-79641041a98a.png" alt="Cozinha planejada moderna com bancada preta e armários verdes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-semibold text-brown-800 mb-2">
                 Cozinhas
@@ -201,11 +158,7 @@ const Home = () => {
             {/* Quartos - com imagem real */}
             <div className="group cursor-pointer">
               <div className="h-64 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/ad992950-fb43-4a78-808f-fc1f4b3dde64.png" 
-                  alt="Closet planejado branco com prateleiras, gavetas e cabideiro"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src="/lovable-uploads/ad992950-fb43-4a78-808f-fc1f4b3dde64.png" alt="Closet planejado branco com prateleiras, gavetas e cabideiro" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-semibold text-brown-800 mb-2">
                 Quartos
@@ -216,11 +169,7 @@ const Home = () => {
             {/* Living - com imagem real */}
             <div className="group cursor-pointer">
               <div className="h-64 rounded-lg mb-4 overflow-hidden">
-                <img 
-                  src="/lovable-uploads/9f182d5b-7fe1-4305-902a-77b601d04e19.png" 
-                  alt="Living moderno integrado com cozinha, mesa de jantar e área de estar"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <img src="/lovable-uploads/9f182d5b-7fe1-4305-902a-77b601d04e19.png" alt="Living moderno integrado com cozinha, mesa de jantar e área de estar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <h3 className="text-xl font-semibold text-brown-800 mb-2">
                 Living
@@ -230,10 +179,7 @@ const Home = () => {
           </div>
           
           <div className="text-center">
-            <Link
-              to="/projetos"
-              className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center"
-            >
+            <Link to="/projetos" className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center">
               VER TODOS OS PROJETOS
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
@@ -254,12 +200,9 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-white p-6 rounded-lg shadow-md">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />)}
                 </div>
                 <p className="text-gray-600 mb-4 italic">
                   "{testimonial.text}"
@@ -267,8 +210,7 @@ const Home = () => {
                 <div className="font-semibold text-brown-800">
                   {testimonial.name}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -282,25 +224,14 @@ const Home = () => {
           <p className="text-xl text-beige-200 mb-8 max-w-2xl mx-auto">
             Entre em contato conosco e descubra como podemos criar o móvel perfeito para sua casa
           </p>
-          <a
-            href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center hover:scale-105 transition-transform"
-          >
-            <img 
-              src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
-              alt="Fale conosco pelo WhatsApp" 
-              className="h-16 w-16 rounded-full"
-            />
+          <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
+            
             <span className="ml-3 bg-beige-500 text-brown-800 px-6 py-3 rounded-lg font-semibold text-lg">
               FALE CONOSCO AGORA
             </span>
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
