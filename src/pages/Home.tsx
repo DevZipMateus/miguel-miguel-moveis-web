@@ -31,22 +31,18 @@ const Home = () => {
     text: "Móveis de altíssima qualidade. Estou muito satisfeita com o resultado.",
     rating: 5
   }];
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-6" 
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        <div className="container-custom section-padding">
+      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-6" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
+        <div className="container-custom section-padding py-[98px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg py-[28px]">
                 MÓVEIS PLANEJADOS
                 <span className="block text-beige-200">SOB MEDIDA</span>
               </h1>
@@ -94,9 +90,8 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
-              const IconComponent = value.icon;
-              return (
-                <div key={index} className="text-center">
+            const IconComponent = value.icon;
+            return <div key={index} className="text-center">
                   <div className="bg-brown-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="h-8 w-8 text-brown-700" />
                   </div>
@@ -106,9 +101,8 @@ const Home = () => {
                   <p className="text-gray-600">
                     {value.description}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -246,8 +240,6 @@ const Home = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
