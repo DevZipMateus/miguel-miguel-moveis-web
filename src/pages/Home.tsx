@@ -1,0 +1,270 @@
+
+import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const Home = () => {
+  const values = [
+    {
+      icon: Award,
+      title: "ACABAMENTO IMPECÁVEL",
+      description: "Cada detalhe é pensado para garantir a máxima qualidade e durabilidade."
+    },
+    {
+      icon: Leaf,
+      title: "SUSTENTABILIDADE",
+      description: "Utilizamos madeiras certificadas e processos eco-responsáveis."
+    },
+    {
+      icon: Clock,
+      title: "PONTUALIDADE",
+      description: "Cumprimos rigorosamente os prazos estabelecidos em contrato."
+    },
+    {
+      icon: Users,
+      title: "ATENDIMENTO PERSONALIZADO",
+      description: "Cada projeto é único e desenvolvido especialmente para você."
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Maria Silva",
+      text: "Excelente trabalho! A cozinha ficou perfeita, exatamente como imaginei.",
+      rating: 5
+    },
+    {
+      name: "João Santos",
+      text: "Pontualidade e qualidade impressionantes. Recomendo para todos!",
+      rating: 5
+    },
+    {
+      name: "Ana Paula",
+      text: "Móveis de altíssima qualidade. Estou muito satisfeita com o resultado.",
+      rating: 5
+    }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 wood-pattern">
+        <div className="container-custom section-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 animate-fade-in">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brown-800 leading-tight">
+                MÓVEIS PLANEJADOS
+                <span className="block text-brown-600">SOB MEDIDA</span>
+              </h1>
+              <p className="text-xl text-brown-700 leading-relaxed">
+                <strong>Tradição, Qualidade e Competência</strong> desde 1993. 
+                Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                >
+                  SOLICITE SEU ORÇAMENTO
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <Link
+                  to="/projetos"
+                  className="border-2 border-brown-700 text-brown-700 px-8 py-4 rounded-lg hover:bg-brown-700 hover:text-white transition-colors font-semibold text-lg inline-flex items-center justify-center"
+                >
+                  VER PROJETOS
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-brown-200 rounded-3xl p-8 shadow-xl">
+                <div className="bg-white rounded-2xl p-6 text-center">
+                  <div className="text-6xl font-bold text-brown-800 mb-2">30+</div>
+                  <div className="text-brown-600 font-medium">ANOS DE EXPERIÊNCIA</div>
+                  <div className="mt-4 text-sm text-gray-600">
+                    Transformando sonhos em realidade desde 1993
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Valores da Marca */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              NOSSOS DIFERENCIAIS
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              O que nos torna únicos e a escolha preferida de nossos clientes
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
+                <div className="bg-beige-100 p-6 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:bg-brown-100 transition-colors">
+                  <value.icon className="h-8 w-8 text-brown-700" />
+                </div>
+                <h3 className="text-lg font-semibold text-brown-800 mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Como Funciona - Preview */}
+      <section className="section-padding bg-beige-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              COMO FUNCIONA
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              5 etapas simples para ter o móvel dos seus sonhos
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-8">
+            {[
+              "Escolha o Ambiente",
+              "Descreva seu Projeto", 
+              "Informe as Medidas",
+              "Aprovação e Execução",
+              "Entrega e Instalação"
+            ].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-brown-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                  {index + 1}
+                </div>
+                <h3 className="font-semibold text-brown-800 text-sm">
+                  {step}
+                </h3>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/etapas"
+              className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center"
+            >
+              CONHEÇA TODAS AS ETAPAS
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Projetos em Destaque */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              PROJETOS EM DESTAQUE
+            </h2>
+            <p className="text-xl text-gray-600">
+              Conheça alguns dos nossos trabalhos mais recentes
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            {[
+              { name: "Cozinhas", desc: "Projetos funcionais e elegantes" },
+              { name: "Quartos", desc: "Ambientes aconchegantes e organizados" },
+              { name: "Home Office", desc: "Espaços produtivos e inspiradores" }
+            ].map((category, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="bg-beige-100 h-64 rounded-lg mb-4 flex items-center justify-center group-hover:bg-beige-200 transition-colors">
+                  <div className="text-center">
+                    <div className="text-6xl text-brown-300 mb-2">📐</div>
+                    <h3 className="text-2xl font-bold text-brown-800">{category.name}</h3>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-brown-800 mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-gray-600">{category.desc}</p>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/projetos"
+              className="bg-brown-700 text-white px-8 py-4 rounded-lg hover:bg-brown-800 transition-colors font-semibold inline-flex items-center"
+            >
+              VER TODOS OS PROJETOS
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Depoimentos */}
+      <section className="section-padding bg-beige-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
+              O QUE NOSSOS CLIENTES DIZEM
+            </h2>
+            <p className="text-xl text-gray-600">
+              A satisfação dos nossos clientes é nossa maior conquista
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 italic">
+                  "{testimonial.text}"
+                </p>
+                <div className="font-semibold text-brown-800">
+                  {testimonial.name}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="section-padding bg-brown-800 text-white">
+        <div className="container-custom text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            PRONTO PARA TRANSFORMAR SEU ESPAÇO?
+          </h2>
+          <p className="text-xl text-beige-200 mb-8 max-w-2xl mx-auto">
+            Entre em contato conosco e descubra como podemos criar o móvel perfeito para sua casa
+          </p>
+          <a
+            href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-beige-500 text-brown-800 px-8 py-4 rounded-lg hover:bg-beige-400 transition-colors font-semibold text-lg inline-flex items-center"
+          >
+            FALE CONOSCO AGORA
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
