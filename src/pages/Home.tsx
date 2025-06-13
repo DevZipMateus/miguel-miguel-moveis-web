@@ -33,51 +33,38 @@ const Home = () => {
   }];
   return <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative bg-gradient-to-br from-beige-100 to-beige-200 wood-pattern"
-        style={{
-          backgroundImage: `url('/lovable-uploads/03a3dbc1-68fd-4dea-b52b-6b310a00354b.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Overlay para melhorar a legibilidade do texto */}
-        <div className="absolute inset-0 bg-black/30"></div>
-        
-        <div className="container-custom section-padding relative z-10">
+      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 wood-pattern">
+        <div className="container-custom section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brown-800 leading-tight">
                 MÓVEIS PLANEJADOS
-                <span className="block text-beige-200">SOB MEDIDA</span>
+                <span className="block text-brown-600">SOB MEDIDA</span>
               </h1>
-              <p className="text-xl text-beige-100 leading-relaxed drop-shadow-md">
+              <p className="text-xl text-brown-700 leading-relaxed">
                 <strong>Tradição, Qualidade e Competência</strong> desde 1993. 
                 Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
-                  <img 
-                    src="/lovable-uploads/a745f338-e488-40fb-815d-6c0c00289320.png" 
-                    alt="Solicite seu orçamento pelo WhatsApp" 
-                    className="h-12 w-12 rounded-full"
-                  />
-                  <span className="ml-3 text-white font-semibold drop-shadow-md">SOLICITE SEU ORÇAMENTO</span>
+                  
+                  <span className="ml-3 text-brown-700 font-semibold">SOLICITE SEU ORÇAMENTO</span>
                 </a>
-                <Link to="/projetos" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-brown-700 transition-colors font-semibold text-lg inline-flex items-center justify-center backdrop-blur-sm">
+                <Link to="/projetos" className="border-2 border-brown-700 text-brown-700 px-8 py-4 rounded-lg hover:bg-brown-700 hover:text-white transition-colors font-semibold text-lg inline-flex items-center justify-center">
                   VER PROJETOS
                 </Link>
               </div>
             </div>
             
             <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-xl">
-                <img 
-                  src="/lovable-uploads/21dbe677-c2ed-4bed-a4eb-0c5ee2e01097.png" 
-                  alt="Francisco Miguel Marcenaria - Logo da empresa sobre fundo de madeira" 
-                  className="w-full h-auto object-cover"
-                />
+              <div className="bg-brown-200 rounded-3xl p-8 shadow-xl">
+                <div className="bg-white rounded-2xl p-6 text-center">
+                  <div className="text-6xl font-bold text-brown-800 mb-2">30+</div>
+                  <div className="text-brown-600 font-medium">ANOS DE EXPERIÊNCIA</div>
+                  <div className="mt-4 text-sm text-gray-600">
+                    Transformando sonhos em realidade desde 1993
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -86,30 +73,7 @@ const Home = () => {
 
       {/* Valores da Marca */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-brown-800 mb-4">
-              NOSSOS DIFERENCIAIS
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              O que nos torna únicos e a escolha preferida de nossos clientes
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => <div key={index} className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-                <div className="bg-beige-100 p-6 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center group-hover:bg-brown-100 transition-colors">
-                  <value.icon className="h-8 w-8 text-brown-700" />
-                </div>
-                <h3 className="text-lg font-semibold text-brown-800 mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {value.description}
-                </p>
-              </div>)}
-          </div>
-        </div>
+        
       </section>
 
       {/* Como Funciona - Preview */}
