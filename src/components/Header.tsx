@@ -50,7 +50,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="container-custom py-2 bg-[#0f0312]/25">
+      <div className="container-custom py-2" style={{ backgroundColor: '#977669' }}>
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -67,8 +67,8 @@ const Header = () => {
               <Link 
                 key={item.name} 
                 to={item.path} 
-                className={`font-medium transition-colors hover:text-brown-700 ${
-                  isActive(item.path) ? 'text-brown-800 border-b-2 border-brown-800' : 'text-gray-700'
+                className={`font-medium transition-colors hover:text-white ${
+                  isActive(item.path) ? 'text-white border-b-2 border-white' : 'text-beige-100'
                 }`}
               >
                 {item.name}
@@ -89,20 +89,20 @@ const Header = () => {
           </a>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
+          <nav className="lg:hidden mt-4 pb-4 border-t border-white/20 pt-4">
             {menuItems.map(item => (
               <Link 
                 key={item.name} 
                 to={item.path} 
-                className={`block py-2 font-medium transition-colors hover:text-brown-700 ${
-                  isActive(item.path) ? 'text-brown-800' : 'text-gray-700'
+                className={`block py-2 font-medium transition-colors hover:text-white ${
+                  isActive(item.path) ? 'text-white' : 'text-beige-100'
                 }`} 
                 onClick={() => setIsMenuOpen(false)}
               >
