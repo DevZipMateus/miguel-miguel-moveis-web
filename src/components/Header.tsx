@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -41,9 +40,6 @@ const Header = () => {
                 <Mail className="h-3 w-3 sm:h-4 sm:w-4 mr-1 flex-shrink-0" />
                 <span className="break-all sm:break-normal text-xs sm:text-sm">francisco.moveis@hotmail.com</span>
               </a>
-            </div>
-            <div className="text-center text-xs lg:text-sm mt-1 lg:mt-0">
-              <span className="font-medium">Segunda a Sexta: 9h às 18h | Sábado: 9h às 13h</span>
             </div>
           </div>
         </div>
