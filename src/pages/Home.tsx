@@ -1,4 +1,3 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
@@ -35,7 +34,7 @@ const Home = () => {
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-2 sm:pt-4 lg:pt-6" style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/d836e3da-0272-4a0e-990e-f208dfe9c4c7.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
