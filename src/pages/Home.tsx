@@ -1,4 +1,4 @@
-import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
+import { ArrowRight, Award, Clock, Leaf, Users, Check, Star, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
   const values = [{
@@ -267,7 +267,31 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* Instagram Section */}
+      <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-12 px-2 sm:px-4 lg:px-0">
+            <h2 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-brown-800 mb-1 sm:mb-2 lg:mb-4">
+              ACOMPANHE MAIS PROJETOS NO INSTAGRAM
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 lg:mb-8">
+              Veja nossos trabalhos mais recentes e se inspire para seu projeto
+            </p>
+          </div>
+          
+          <div className="text-center px-2 sm:px-4 lg:px-0">
+            <a 
+              href="https://www.instagram.com/franciscomiguelmarcenaria?utm_source=qr&igsh=MTV1OTN0Mzh4a2Z5aQ%3D%3D" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors font-semibold text-sm sm:text-base lg:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform"
+            >
+              <Instagram className="mr-2 sm:mr-3 h-5 w-5 sm:h-6 sm:w-6" />
+              @franciscomiguelmarcenaria
+            </a>
+          </div>
+        </div>
+      </section>
     </div>;
 };
 export default Home;
