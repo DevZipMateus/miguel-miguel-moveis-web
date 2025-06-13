@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
@@ -48,7 +49,14 @@ const KitchenCarousel = () => {
 
   useEffect(() => {
     if (!selectedImage && autoplayRef.current) {
-      autoplayRef.current.play();
+      // Add safety check to ensure the plugin has the necessary methods
+      try {
+        if (typeof autoplayRef.current.play === 'function') {
+          autoplayRef.current.play();
+        }
+      } catch (error) {
+        console.log('Autoplay restart failed:', error);
+      }
     }
   }, [selectedImage]);
 
