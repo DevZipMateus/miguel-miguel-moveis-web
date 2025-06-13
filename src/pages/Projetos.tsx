@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ArrowRight, Eye } from 'lucide-react';
 
@@ -10,7 +9,6 @@ const Projetos = () => {
     { id: 'cozinhas', name: 'COZINHAS' },
     { id: 'salas', name: 'SALAS' },
     { id: 'quartos', name: 'QUARTOS' },
-    { id: 'home-office', name: 'HOME OFFICE' },
     { id: 'lavabos', name: 'LAVABOS' },
     { id: 'living', name: 'LIVING' },
   ];
@@ -39,21 +37,14 @@ const Projetos = () => {
     },
     {
       id: 4,
-      title: "Home Office Funcional",
-      category: "home-office",
-      description: "Mesa executiva com gavetas e estante para livros e decoração",
-      features: ["Mesa executiva", "Gavetas organizadoras", "Estante integrada", "Ergonomia"],
-    },
-    {
-      id: 5,
       title: "Lavabo Compacto",
       category: "lavabos",
       description: "Móvel sob medida para pia com aproveitamento máximo do espaço",
       features: ["Móvel sob pia", "Gavetas", "Espelho integrado", "Compacto"],
     },
     {
-      id: 6,
-      title: "Living Aconchegante",
+      id: 5,
+      title: "Living Integrado",
       category: "living",
       description: "Estante para TV, bar e área de convivência integrados",
       features: ["Painel TV", "Bar integrado", "Prateleiras", "Design moderno"],
@@ -176,9 +167,8 @@ const Projetos = () => {
                       {index === 0 && '🍽️'}
                       {index === 1 && '🛋️'}
                       {index === 2 && '🛏️'}
-                      {index === 3 && '💻'}
-                      {index === 4 && '🚿'}
-                      {index === 5 && '📺'}
+                      {index === 3 && '🚿'}
+                      {index === 4 && '📺'}
                     </div>
                     <h3 className="text-xl font-bold text-brown-800">{category.name}</h3>
                   </div>
@@ -187,7 +177,6 @@ const Projetos = () => {
                   {category.id === 'cozinhas' && 'Projetos funcionais com aproveitamento máximo do espaço'}
                   {category.id === 'salas' && 'Ambientes elegantes para receber e relaxar'}
                   {category.id === 'quartos' && 'Espaços aconchegantes e organizados para descanso'}
-                  {category.id === 'home-office' && 'Ambientes produtivos e inspiradores para trabalho'}
                   {category.id === 'lavabos' && 'Soluções compactas e funcionais'}
                   {category.id === 'living' && 'Integração perfeita entre funcionalidade e design'}
                 </p>

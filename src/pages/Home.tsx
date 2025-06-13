@@ -1,3 +1,4 @@
+
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -208,18 +209,19 @@ const Home = () => {
               <p className="text-gray-600">Ambientes aconchegantes e organizados</p>
             </div>
 
-            {/* Home Office - mantém placeholder */}
+            {/* Living - com imagem real */}
             <div className="group cursor-pointer">
-              <div className="bg-beige-100 h-64 rounded-lg mb-4 flex items-center justify-center group-hover:bg-beige-200 transition-colors">
-                <div className="text-center">
-                  <div className="text-6xl text-brown-300 mb-2">📐</div>
-                  <h3 className="text-2xl font-bold text-brown-800">Home Office</h3>
-                </div>
+              <div className="h-64 rounded-lg mb-4 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/9f182d5b-7fe1-4305-902a-77b601d04e19.png" 
+                  alt="Living moderno integrado com cozinha, mesa de jantar e área de estar"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
               <h3 className="text-xl font-semibold text-brown-800 mb-2">
-                Home Office
+                Living
               </h3>
-              <p className="text-gray-600">Espaços produtivos e inspiradores</p>
+              <p className="text-gray-600">Espaços integrados e modernos</p>
             </div>
           </div>
           
