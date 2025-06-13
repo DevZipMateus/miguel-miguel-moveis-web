@@ -1,3 +1,4 @@
+
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const Home = () => {
@@ -34,7 +35,7 @@ const Home = () => {
   return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-6" style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -42,20 +43,26 @@ const Home = () => {
         <div className="container-custom section-padding py-[98px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg py-[28px]">
-                MÓVEIS PLANEJADOS
-                <span className="block text-beige-200">SOB MEDIDA</span>
-              </h1>
-              <p className="text-xl text-white leading-relaxed drop-shadow-md">
-                <strong>Tradição, Qualidade e Competência</strong> desde 1993. 
-                Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
-              </p>
+              <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight py-[28px]" style={{
+                  textShadow: '3px 3px 6px rgba(0, 0, 0, 0.8), 1px 1px 3px rgba(0, 0, 0, 0.9)'
+                }}>
+                  MÓVEIS PLANEJADOS
+                  <span className="block text-beige-100">SOB MEDIDA</span>
+                </h1>
+                <p className="text-xl text-white leading-relaxed" style={{
+                  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)'
+                }}>
+                  <strong>Tradição, Qualidade e Competência</strong> desde 1993. 
+                  Oferecemos móveis planejados com acabamento impecável e pontualidade que você pode confiar.
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <a href="https://wa.me/5515997827489?text=Olá! Gostaria de solicitar um orçamento." target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:scale-105 transition-transform">
                   
-                  <span className="ml-3 bg-brown-700 text-white px-6 py-3 rounded-lg font-semibold text-lg drop-shadow-md">SOLICITE SEU ORÇAMENTO</span>
+                  <span className="ml-3 bg-brown-700 text-white px-6 py-3 rounded-lg font-semibold text-lg drop-shadow-xl shadow-lg">SOLICITE SEU ORÇAMENTO</span>
                 </a>
-                <Link to="/projetos" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-brown-700 transition-colors font-semibold text-lg inline-flex items-center justify-center drop-shadow-md">
+                <Link to="/projetos" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-brown-700 transition-colors font-semibold text-lg inline-flex items-center justify-center drop-shadow-xl shadow-lg bg-black/20 backdrop-blur-sm">
                   VER PROJETOS
                 </Link>
               </div>
@@ -139,7 +146,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Projetos em Destaque */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -195,7 +201,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Depoimentos */}
       <section className="section-padding bg-beige-50">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -223,7 +228,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Final */}
       <section className="section-padding bg-brown-800 text-white">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
