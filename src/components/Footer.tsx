@@ -1,8 +1,9 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Clock } from 'lucide-react';
+
+import { Facebook, Instagram, Mail, MapPin, Phone } from 'lucide-react';
 const Footer = () => {
   return <footer className="bg-brown-800 text-white">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Logo e Descrição */}
           <div className="lg:col-span-1">
             
@@ -29,27 +30,6 @@ const Footer = () => {
               <div className="flex items-start text-beige-200">
                 <MapPin className="h-4 w-4 mr-3 mt-1 flex-shrink-0" />
                 <span>Rua Célia Lourdes Vercellino, 1314<br />Jardim Hermínia – Boituva, SP</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Horário */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">HORÁRIO DE ATENDIMENTO</h4>
-            <div className="space-y-2">
-              <div className="flex items-center text-beige-200">
-                <Clock className="h-4 w-4 mr-3" />
-                <div>
-                  <div>Segunda a Sexta</div>
-                  <div className="text-sm">09h às 18h</div>
-                </div>
-              </div>
-              <div className="flex items-center text-beige-200 mt-3">
-                <Clock className="h-4 w-4 mr-3" />
-                <div>
-                  <div>Sábado</div>
-                  <div className="text-sm">09h às 13h</div>
-                </div>
               </div>
             </div>
           </div>
