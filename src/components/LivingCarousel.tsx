@@ -1,11 +1,11 @@
-
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import ImageModal from './ImageModal';
 
 const LivingCarousel = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  const autoplayRef = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
 
   const livingImages = [
     {
@@ -34,6 +34,12 @@ const LivingCarousel = () => {
     setSelectedImage(null);
   };
 
+  useEffect(() => {
+    if (!selectedImage && autoplayRef.current) {
+      autoplayRef.current.play();
+    }
+  }, [selectedImage]);
+
   return (
     <>
       <div className="max-w-6xl mx-auto px-2 sm:px-4">
@@ -42,11 +48,7 @@ const LivingCarousel = () => {
             align: "start",
             loop: true,
           }}
-          plugins={[
-            Autoplay({
-              delay: 3000,
-            }),
-          ]}
+          plugins={[autoplayRef.current]}
           className="w-full"
         >
           <CarouselContent className="-ml-2 sm:-ml-4">
