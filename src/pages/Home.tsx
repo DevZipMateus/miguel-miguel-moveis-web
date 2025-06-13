@@ -1,4 +1,3 @@
-
 import { ArrowRight, Award, Clock, Leaf, Users, Check, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -38,31 +37,37 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-4 sm:pt-6 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh]" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center top',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'scroll'
-      }}>
+      <section 
+        className="relative bg-gradient-to-br from-beige-100 to-beige-200 pt-4 sm:pt-6 min-h-[85vh] sm:min-h-[90vh] lg:min-h-[95vh]" 
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/lovable-uploads/873f0be9-1856-4415-9c80-3111b5e94d4b.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 20%',
+          backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'scroll'
+        }}
+      >
         <style jsx>{`
           @media (max-width: 640px) {
             section {
-              background-position: center 20% !important;
+              background-position: center 15% !important;
               background-size: cover !important;
-              min-height: 75vh !important;
+              min-height: 85vh !important;
             }
           }
           @media (min-width: 641px) and (max-width: 1024px) {
             section {
-              background-position: center 30% !important;
-              min-height: 80vh !important;
+              background-position: center 25% !important;
+              background-size: cover !important;
+              min-height: 90vh !important;
             }
           }
           @media (min-width: 1025px) {
             section {
-              background-position: center center !important;
+              background-position: center 30% !important;
               background-attachment: fixed !important;
+              background-size: cover !important;
+              min-height: 95vh !important;
             }
           }
         `}</style>
